@@ -58,7 +58,15 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a
+                href={nav.assets ? nav.assets : `#${nav.id}`}
+                download={!!nav.assets}
+              >
+                {nav.title}
+              </a>
+              {/* <a href={nav.assets} download>
+                {nav.title}
+              </a> */}
             </li>
           ))}
         </ul>

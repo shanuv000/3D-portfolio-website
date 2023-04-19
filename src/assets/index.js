@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo2.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -29,9 +29,10 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import resume from "./vaibhavreact.pdf";
 export {
   logo,
+  resume,
   backend,
   creator,
   mobile,
