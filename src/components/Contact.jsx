@@ -14,7 +14,12 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  // Apis
+  const SERVICE_KEY = import.meta.env.VITE_REACT_API_SERVICE;
+  const TEMPLATE_KEY = import.meta.env.VITE_REACT_API_TEMPLATE;
+  const API_PUBLIC_KEY = import.meta.env.VITE_REACT_API_PUBLIC_KEY;
 
+  console.log(API_PUBLIC_KEY, TEMPLATE_KEY, SERVICE_KEY);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -35,8 +40,8 @@ const Contact = () => {
     //B4qToPMNcArUGSvgm
     emailjs
       .send(
-        "service_iym7nem",
-        "template_60ucztr",
+        SERVICE_KEY,
+        TEMPLATE_KEY,
         // import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         // import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
@@ -47,7 +52,7 @@ const Contact = () => {
           message: form.message,
         },
         // import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-        "ogqFFiL48jfYH50Bz"
+        API_PUBLIC_KEY
       )
       .then(
         () => {
