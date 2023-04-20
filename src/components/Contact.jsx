@@ -19,7 +19,7 @@ const Contact = () => {
   const TEMPLATE_KEY = import.meta.env.VITE_REACT_API_TEMPLATE;
   const API_PUBLIC_KEY = import.meta.env.VITE_REACT_API_PUBLIC_KEY;
 
-  console.log(API_PUBLIC_KEY, TEMPLATE_KEY, SERVICE_KEY);
+  // console.log(API_PUBLIC_KEY, TEMPLATE_KEY, SERVICE_KEY);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
