@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import validator from "validator";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -14,6 +15,8 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isEmpty, setIsEmpty] = useState(false);
+
   // Apis
   const SERVICE_KEY = import.meta.env.VITE_REACT_API_SERVICE;
   const TEMPLATE_KEY = import.meta.env.VITE_REACT_API_TEMPLATE;
@@ -38,6 +41,7 @@ const Contact = () => {
     // template_60ucztr
     //service_iym7nem
     //B4qToPMNcArUGSvgm
+    setIsEmpty(validator.isEmpty(value));
     emailjs
       .send(
         SERVICE_KEY,
@@ -68,7 +72,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
+          // <Toasts trigger={true} />;
           alert("Ahh, something went wrong. Please try again.");
         }
       );
