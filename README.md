@@ -1,6 +1,6 @@
-Sure, here's an updated version of the Markdown code with your website link added:
-
 # Vaibhav's 3D Portfolio Website
+
+![Cover photo of Vaibhav's 3D Portfolio Website](https://i.graphicmama.com/blog/wp-content/uploads/2022/10/11080759/modern-monochrome-website-design-with-3D-graphics.jpg)
 
 Hi there! My name is Vaibhav and I'm excited to showcase my 3D Portfolio Website. I used ReactJS, Vite, Three.js, canvas, and many more technologies to create a stunning and visually appealing website.
 
